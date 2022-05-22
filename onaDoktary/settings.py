@@ -31,7 +31,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['doktary.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['0.0.0.0', 'doktary.herokuapp.com', '127.0.0.1', 'localhost']
 
 CORS_ORIGIN_WHITELIST = [
     'https://localhost:3000',
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'phonenumber_field',
+    'whitenoise.runserver_nostatic'
 
     #local apps
     'index'
