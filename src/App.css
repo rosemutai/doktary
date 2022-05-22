@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rect{
+  z-index: 1;
+}
+
+
+.calender-container{
+  width: 100%;
+  background-color: red;
+  position: relative;
+
+}
+
