@@ -17,7 +17,7 @@ from .serializers import ContactSerializer, BookAppointmentSerializer
 
 
 # Serve Single Page Application
-index = never_cache(TemplateView.as_view(template_name='index.html')
+# index = never_cache(TemplateView.as_view(template_name='index.html'))
 
 @api_view(['POST', ])
 def contact_view(request):
