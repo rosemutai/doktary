@@ -1,2 +1,1 @@
-release: python manage.py migrate
-web: gunicorn onaDoktary.wsgi --log-file -
+web: gunicorn onaDoktary.wsgi

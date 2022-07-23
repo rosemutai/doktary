@@ -142,9 +142,12 @@ USE_I18N = True
 USE_TZ = True
 
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = Path(__file__).resolve().root
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -152,7 +155,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -179,10 +181,7 @@ EMAIL_USE_TLS = str(os.getenv('EMAIL_USE_TLS'))
 
 
 # Configure Django App for Heroku.
-
 django_heroku.settings(locals())
-
-BASE_DIR = Path(__file__).resolve().root
 
 dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
@@ -190,3 +189,7 @@ if os.path.isfile(dotenv_file):
 
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
+
+
+# release: python manage.py migrate
+# web: gunicorn onaDoktary.wsgi --log-file -
