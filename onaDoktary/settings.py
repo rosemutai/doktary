@@ -43,6 +43,7 @@ CORS_ORIGIN_WHITELIST = [
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +55,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'phonenumber_field',
-    'whitenoise.runserver_nostatic'
+    
 
     #local apps
     'index'
@@ -71,7 +72,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 ROOT_URLCONF = 'onaDoktary.urls'
@@ -191,5 +192,4 @@ options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
 
 
-# release: python manage.py migrate
-# web: gunicorn onaDoktary.wsgi --log-file -
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
