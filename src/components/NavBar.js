@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
-import { Outlet, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
 
 const NavBar = () => {
