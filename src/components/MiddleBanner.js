@@ -12,7 +12,7 @@ function MiddleBanner() {
               <p className='-ml-16 mr-1 w-3/5 md:w-4/5 md:ml-3 md:mr-5 my-9 md:m-9 leading-5 text-gray-500'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Etiam nulla dolor, ullamcorper nec dolor quis, sollicitudin
                 consectetur arcu. Vivamus fermentum</p>
-                <button className='w-40 py-4 md:py-2 px-4 rounded-2xl tracking-wider -ml-60
+                <button className='w-40 py-4 md:py-2 px-4 rounded-2xl tracking-wider -ml-36
                   font-semibold text-gray-200 bg-indigo-700 md:w-32 md:-ml-60 hover:w-40 hover:bg-indigo-500 
                   hover:tracking-widest hover:shadow-md hover:shadow-indigo-700 hover:transition-all'>Start Now</button>
           </div>
